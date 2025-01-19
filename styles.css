@@ -1,3 +1,12 @@
+* {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  -webkit-touch-callout: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
 html, body {
   height: 100vh;
   margin: 0;
@@ -274,6 +283,15 @@ footer a:hover {
     margin: 0.5rem;
     padding: 1rem;
     max-height: 100vh;
+  }
+
+  * {
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    -webkit-touch-callout: none !important;
+    pointer-events: auto !important;
   }
 }
 

@@ -226,6 +226,10 @@ footer a:hover {
     min-height: 100vh;
     overflow-y: auto;
     padding: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;  
   }
 
   .main-wrapper {
@@ -380,36 +384,40 @@ footer a:hover {
 
 .loader-circle {
   position: absolute;
-  width: 60px;
-  height: 60px;
-  border: 4px solid transparent;
   border-radius: 50%;
-  animation: rotate 2s linear infinite;
+  border: 4px solid transparent;
+  animation: rotate var(--duration) var(--timing) infinite;
 }
 
 .loader-circle:nth-child(1) {
-  border-top-color: #1e3c72;
-  animation-timing-function: ease-in-out;
+  --duration: 2s;
+  --timing: cubic-bezier(0.4, 0, 0.2, 1);
+  width: 60px;
+  height: 60px;
+  border-top: 4px solid #1e3c72;
+  animation: rotate1 var(--duration) var(--timing) infinite;
 }
 
 .loader-circle:nth-child(2) {
+  --duration: 1.5s;
+  --timing: cubic-bezier(0.34, 1.56, 0.64, 1);
   width: 40px;
   height: 40px;
   top: 10px;
   left: 10px;
-  border-right-color: #2575fc;
-  animation-timing-function: ease-out;
-  animation-duration: 1s;
+  border-right: 4px solid #2575fc;
+  animation: rotate2 var(--duration) var(--timing) infinite;
 }
 
 .loader-circle:nth-child(3) {
+  --duration: 1s;
+  --timing: cubic-bezier(0.24, 0.97, 0.69, 0.14);
   width: 20px;
   height: 20px;
   top: 20px;
   left: 20px;
-  border-bottom-color: #6a11cb;
-  animation-timing-function: ease-in;
-  animation-duration: 1.5s;
+  border-bottom: 4px solid #6a11cb;
+  animation: rotate3 var(--duration) var(--timing) infinite;
 }
 
 @keyframes rotate {
@@ -458,5 +466,31 @@ footer a:hover {
     height: 15px;
     top: 15px;
     left: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .loader {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .loader-circle:nth-child(1) {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .loader-circle:nth-child(2) {
+    width: 25px;
+    height: 25px;
+    top: 6.25px;
+    left: 6.25px;
+  }
+  
+  .loader-circle:nth-child(3) {
+    width: 15px;
+    height: 15px;
+    top: 12.5px;
+    left: 12.5px;
   }
 }

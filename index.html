@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أوقات الصلاة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+        </div>
+    </div>
+    <div class="main-wrapper">
+        <div id="particles-js"></div>
+        <div class="container">
+            <h1>أوقات الصلاة في <span id="country">--</span></h1>
+            <div class="next-prayer-box">
+                <h2><span id="next-prayer-name">--</span></h2>
+                <div id="countdown">--:--:--</div>
+            </div>
+            <div class="prayer-times">
+                <p id="fajr-prayer"><i class="fas fa-mosque"></i> <span id="fajr">--:--</span> الفجر</p>
+                <p id="sunrise-prayer"><i class="fas fa-star-and-crescent"></i> <span id="sunrise">--:--</span> الشروق</p>
+                <p id="dhuhr-prayer"><i class="fas fa-kaaba"></i> <span id="dhuhr">--:--</span> الظهر</p>
+                <p id="asr-prayer"><i class="fas fa-mosque"></i> <span id="asr">--:--</span> العصر</p>
+                <p id="maghrib-prayer"><i class="fas fa-star-and-crescent"></i> <span id="maghrib">--:--</span> المغرب</p>
+                <p id="isha-prayer"><i class="fas fa-moon"></i> <span id="isha">--:--</span> العشاء</p>
+            </div>
+            <div class="hijri-date-box">
+                <p><span id="hijri-date">--/--/----</span></p>
+            </div>
+            <footer>
+                <p>تم التطوير بواسطة <a href="https://github.com/XUIOS" target="_blank">S e i F ₪𝔻ᎥŦ𝕚ᑎᎶ</a></p>
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
